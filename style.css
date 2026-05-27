@@ -1,89 +1,127 @@
 /* ==========================================================================
+   ROOT - VARIÁVEIS GLOBAIS
+   ========================================================================== */
+:root{
+  /* Cores principais */
+  --cor-primaria: #2e7d32;
+  --cor-secundaria: #8d6e63;
+  --cor-destaque: #fbc02d;
+
+  /* Fundo e texto */
+  --cor-fundo: #f5f5dc;
+  --cor-texto: #333;
+  --cor-texto-claro: #fff;
+
+  /* Cards */
+  --cor-card: #ffffff;
+  --cor-card-dark: #333333;
+
+  /* Dark Mode */
+  --cor-fundo-dark: #222;
+  --cor-texto-dark: #ffffff;
+
+  /* Sombras */
+  --sombra-media: 0 4px 10px rgba(0,0,0,0.1);
+  --sombra-forte: 0 5px 15px rgba(0,0,0,0.3);
+
+  /* Bordas */
+  --radius: 15px;
+
+  /* Transições */
+  --transicao: 0.3s;
+}
+
+/* ==========================================================================
    CONFIGURAÇÕES GERAIS (RESET)
    ========================================================================== */
 *{
   margin:0;
   padding:0;
-  box-sizing:border-box; /* Garante que padding/border não aumentem o tamanho do elemento */
+  box-sizing:border-box;
   font-family: Arial, Helvetica, sans-serif;
 }
 
 body{
-  background:#f5f5dc;
-  color:#333;
+  background: var(--cor-fundo);
+  color: var(--cor-texto);
   line-height:1.6;
-  overflow-x: hidden; /* Evita rolagem horizontal acidental */
+  overflow-x:hidden;
 }
 
 /* ==========================================================================
    HEADER & NAVEGAÇÃO
    ========================================================================== */
 header{
-  background:linear-gradient(to right, #2e7d32, #8d6e63);
-  color:white;
+  background: linear-gradient(
+    to right,
+    var(--cor-primaria),
+    var(--cor-secundaria)
+  );
+  color: var(--cor-texto-claro);
   text-align:center;
   padding:60px 20px;
 }
 
 header h1{
-  font-size: clamp(2rem, 5vw, 3.5rem); /* Fonte fluida: min 2rem, ideal 5vw, max 3.5rem */
+  font-size: clamp(2rem, 5vw, 3.5rem);
 }
 
 nav{
-  background:#fbc02d;
+  background: var(--cor-destaque);
   text-align:center;
   padding:15px;
-  position: sticky; /* Menu fixo no topo ao rolar */
-  top: 0;
-  z-index: 1000;
+  position:sticky;
+  top:0;
+  z-index:1000;
 }
 
 nav a{
-  color:#333;
+  color: var(--cor-texto);
   text-decoration:none;
   margin:0 10px;
   font-weight:bold;
-  transition:0.3s;
-  display: inline-block; /* Melhora a área de clique em telas menores */
+  transition: var(--transicao);
+  display:inline-block;
 }
 
 nav a:hover{
-  color:#2e7d32;
+  color: var(--cor-primaria);
 }
 
 /* ==========================================================================
-   SEÇÕES E LAYOUT (FLEXBOX/GRID)
+   SEÇÕES E LAYOUT
    ========================================================================== */
 section{
-  padding:40px 5%; /* Padding lateral em porcentagem para flexibilidade */
+  padding:40px 5%;
   max-width:1200px;
   margin:auto;
 }
 
 .container{
   display:flex;
-  flex-wrap:wrap; /* Permite que os itens quebrem linha em telas pequenas */
+  flex-wrap:wrap;
   gap:30px;
   align-items:center;
 }
 
-.texto, .imagem{
+.texto,
+.imagem{
   flex:1;
-  min-width:300px; /* Quando a tela for menor que 300px, eles empilham */
+  min-width:300px;
 }
 
 .imagem img{
   width:100%;
-  height: auto; /* Mantém a proporção da imagem */
-  border-radius:15px;
-  box-shadow:0 5px 15px rgba(0,0,0,0.3);
+  height:auto;
+  border-radius: var(--radius);
+  box-shadow: var(--sombra-forte);
 }
 
 /* ==========================================================================
-   COMPONENTES (CARDS & GALERIA)
+   COMPONENTES
    ========================================================================== */
 h2{
-  color:#2e7d32;
+  color: var(--cor-primaria);
   margin-bottom:20px;
   font-size: clamp(1.5rem, 4vw, 2rem);
 }
@@ -92,84 +130,101 @@ button{
   margin-top:20px;
   padding:12px 25px;
   border:none;
-  background:#2e7d32;
-  color:white;
+  background: var(--cor-primaria);
+  color: var(--cor-texto-claro);
   border-radius:8px;
   cursor:pointer;
-  transition:0.3s;
-  font-size: 1rem;
+  transition: var(--transicao);
+  font-size:1rem;
 }
 
-/* Grid de Cards Responsivo */
-.cards, .galeria-container {
+button:hover{
+  opacity:0.9;
+}
+
+/* ==========================================================================
+   CARDS & GALERIA
+   ========================================================================== */
+.cards,
+.galeria-container{
   display:grid;
-  /* Cria colunas de no mínimo 250px, preenchendo o espaço disponível */
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); 
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   gap:20px;
   margin-top:30px;
 }
 
 .card{
-  background:white;
+  background: var(--cor-card);
   padding:25px;
-  border-radius:15px;
-  box-shadow:0 4px 10px rgba(0,0,0,0.1);
-  border-top:8px solid #fbc02d;
-  transition:0.3s;
+  border-radius: var(--radius);
+  box-shadow: var(--sombra-media);
+  border-top:8px solid var(--cor-destaque);
+  transition: var(--transicao);
 }
 
 .card:hover{
   transform:translateY(-8px);
 }
 
-/* Itens da Galeria */
 .galeria-item{
   overflow:hidden;
-  border-radius:15px;
-  box-shadow:0 4px 10px rgba(0,0,0,0.2);
-  transition:0.3s;
-  background:white;
+  border-radius: var(--radius);
+  box-shadow: var(--sombra-media);
+  transition: var(--transicao);
+  background: var(--cor-card);
 }
 
 .galeria-item img{
   width:100%;
   height:250px;
-  object-fit:cover; /* Corta a imagem para preencher o espaço sem distorcer */
+  object-fit:cover;
 }
 
 /* ==========================================================================
    VÍDEOS RESPONSIVOS
    ========================================================================== */
-.video-container {
-    position: relative;
-    width: 100%;
-    padding-bottom: 56.25%; /* Mantém proporção 16:9 */
-    height: 0;
-    overflow: hidden;
-    border-radius: 8px;
+.video-container{
+  position:relative;
+  width:100%;
+  padding-bottom:56.25%;
+  height:0;
+  overflow:hidden;
+  border-radius:8px;
 }
 
-.video-container iframe {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
+.video-container iframe{
+  position:absolute;
+  top:0;
+  left:0;
+  width:100%;
+  height:100%;
 }
 
 /* ==========================================================================
-   DARK MODE & FOOTER
+   DARK MODE
    ========================================================================== */
 .dark-mode{
-  background:#222;
-  color:white;
+  background: var(--cor-fundo-dark);
+  color: var(--cor-texto-dark);
 }
 
-.dark-mode .card, .dark-mode .galeria-item{
-  background:#333;
-  color:white;
+.dark-mode .card,
+.dark-mode .galeria-item{
+  background: var(--cor-card-dark);
+  color: var(--cor-texto-dark);
 }
 
+.dark-mode nav a{
+  color: var(--cor-texto-dark);
+}
+
+.dark-mode nav a:hover{
+  color: var(--cor-destaque);
+}
+
+/* ==========================================================================
+   BOTÃO MODO ESCURO
+   ========================================================================== */
 .modo-escuro{
   position:fixed;
   bottom:20px;
@@ -177,108 +232,109 @@ button{
   border-radius:50%;
   width:60px;
   height:60px;
-  z-index: 1001;
-  background:#fbc02d;
-  border: none;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+  z-index:1001;
+  background: var(--cor-destaque);
+  border:none;
+  box-shadow: var(--sombra-forte);
+  cursor:pointer;
 }
 
+/* ==========================================================================
+   FOOTER
+   ========================================================================== */
 footer{
-  background:#8d6e63;
-  color:white;
+  background: var(--cor-secundaria);
+  color: var(--cor-texto-claro);
   text-align:center;
   padding:30px 20px;
 }
 
 /* ==========================================================================
-   MEDIA QUERIES (AJUSTES ESPECÍFICOS)
+   MENU SANDUÍCHE
+   ========================================================================== */
+.nav-list{
+  display:flex;
+  justify-content:center;
+  list-style:none;
+}
+
+.menu-toggle{
+  display:none;
+  flex-direction:column;
+  cursor:pointer;
+  gap:5px;
+  width:30px;
+  margin:0 auto;
+}
+
+.bar{
+  height:3px;
+  width:100%;
+  background-color: var(--cor-texto);
+  border-radius:10px;
+  transition: var(--transicao);
+}
+
+/* ==========================================================================
+   MEDIA QUERIES
    ========================================================================== */
 
-/* Ajustes para Tablets e Celulares Médios */
-@media (max-width: 768px) {
-  nav a {
-    margin: 0 8px;
-    font-size: 0.9rem;
+/* Tablets */
+@media (max-width:768px){
+
+  nav a{
+    margin:0 8px;
+    font-size:0.9rem;
   }
-  
-  section {
-    padding: 30px 15px;
+
+  section{
+    padding:30px 15px;
+  }
+
+  .menu-toggle{
+    display:flex;
+  }
+
+  .nav-list{
+    display:none;
+    flex-direction:column;
+    width:100%;
+    background: var(--cor-destaque);
+    padding:20px 0;
+    margin-top:15px;
+  }
+
+  .nav-list.active{
+    display:flex;
+  }
+
+  nav a{
+    margin:10px 0;
+    display:block;
   }
 }
 
-/* Ajustes para Celulares Pequenos */
-@media (max-width: 480px) {
-  header {
-    padding: 40px 10px;
+/* Celulares */
+@media (max-width:480px){
+
+  header{
+    padding:40px 10px;
   }
 
-  nav {
-    display: flex;
-    flex-direction: column; /* Menu vertical em telas muito pequenas */
-    gap: 10px;
+  nav{
+    display:flex;
+    flex-direction:column;
+    gap:10px;
   }
 
-  .container {
-    text-align: center; /* Centraliza texto em telas mobile */
-  }
-  
-  .modo-escuro {
-    width: 50px;
-    height: 50px;
-    bottom: 10px;
-    right: 10px;
-  }
-}
-
-
-/*Navbar Menu */
-/* --- Estilos do Menu Sanduíche --- */
-
-.nav-list {
-  display: flex;
-  justify-content: center;
-  list-style: none;
-}
-
-.menu-toggle {
-  display: none; /* Escondido por padrão no desktop */
-  flex-direction: column;
-  cursor: pointer;
-  gap: 5px;
-  width: 30px;
-  margin: 0 auto;
-}
-
-.bar {
-  height: 3px;
-  width: 100%;
-  background-color: #333;
-  border-radius: 10px;
-  transition: 0.3s;
-}
-
-/* --- Media Query para Mobile (Telas até 768px) --- */
-@media (max-width: 768px) {
-  .menu-toggle {
-    display: flex; /* Mostra o botão no celular */
+  .container{
+    text-align:center;
   }
 
-  .nav-list {
-    display: none; /* Esconde a lista de links inicial */
-    flex-direction: column;
-    width: 100%;
-    background: #fbc02d;
-    padding: 20px 0;
-    margin-top: 15px;
-  }
-
-  /* Classe que o JavaScript vai adicionar para abrir o menu */
-  .nav-list.active {
-    display: flex;
-  }
-
-  nav a {
-    margin: 10px 0;
-    display: block;
+  .modo-escuro{
+    width:50px;
+    height:50px;
+    bottom:10px;
+    right:10px;
   }
 }
