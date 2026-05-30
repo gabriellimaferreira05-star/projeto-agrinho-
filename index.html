@@ -1,154 +1,226 @@
 <!DOCTYPE html>
+
 <html lang="pt-BR">
+
 <head>
+  <!-- Configurações básicas da página -->
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Energia Solar no Agro</title>
+
+  <!-- Título exibido na aba do navegador -->
+
+  <title>Energia Solar no Agronegócio</title>
+
+  <!-- Arquivo de estilos CSS -->
 
   <link rel="stylesheet" href="style.css">
-
 </head>
 
 <body>
 
+  <!-- Cabeçalho principal do site -->
+
   <header>
-    <h1>Energia Solar no Agro</h1>
-    <p>Placas solares transformando o agronegócio</p>
+    <h1>Energia Solar no Agronegócio</h1>
+    <p>
+      Como a energia solar está transformando o campo com economia,
+      sustentabilidade e inovação.
+    </p>
   </header>
 
+  <!-- Menu de navegação -->
+
   <nav>
-    <div class="menu-toggle" id="mobile-menu">
-    <span class="bar"></span>
-    <span class="bar"></span>
-    <span class="bar"></span>
-  </div>
-  <ul class="nav-list" id="nav-list">
-   <li> <a href="#inicio">Início</a></li> 
-    <li><a href="#beneficios">Benefícios</a></li> 
-   <li> <a href="#aluno">Aluno</a></li> 
-    <li><a href="#agrinho">Agrinho</a></li> 
-    <li><a href="#galeria">Galeria</a></li> 
-    <li><a href="videos.html">Vídeo</a></li> 
-     </ul>
+
+```
+<!-- Botão do menu mobile (hambúrguer) -->
+<div class="menu-toggle" id="mobile-menu">
+  <span class="bar"></span>
+  <span class="bar"></span>
+  <span class="bar"></span>
+</div>
+
+<!-- Lista de links do menu -->
+<ul class="nav-list" id="nav-list">
+  <li><a href="#inicio">Início</a></li>
+  <li><a href="#beneficios">Benefícios</a></li>
+  <li><a href="#aluno">Aluno</a></li>
+  <li><a href="#agrinho">Agrinho</a></li>
+  <li><a href="#galeria">Galeria</a></li>
+  <li><a href="videos.html">Vídeos</a></li>
+</ul>
+```
+
   </nav>
+
+  <!-- Seção principal do site -->
 
   <section id="inicio" class="container">
 
-    <div class="texto">
-      <h2>Energia Solar no Campo</h2>
+```
+<!-- Texto de apresentação -->
+<div class="texto">
+  <h2>Energia Solar no Campo</h2>
 
-      <p>
-        A energia solar é uma solução moderna e sustentável para o agronegócio.
-        Com placas solares, produtores rurais conseguem economizar energia
-        e proteger o meio ambiente.
-      </p>
+  <p>
+    A energia solar é uma das principais alternativas sustentáveis para o
+    agronegócio moderno. Por meio da instalação de painéis fotovoltaicos,
+    produtores rurais podem reduzir significativamente os custos com energia,
+    aumentar a produtividade e contribuir para a preservação do meio ambiente.
+  </p>
 
-      <button onclick="mostrarMensagem()">
-        Saiba Mais
-      </button>
-    </div>
+  <!-- Botão que chama uma função JavaScript -->
+  <button onclick="mostrarMensagem()">
+    Saiba Mais
+  </button>
+</div>
 
-    <div class="imagem">
-      <img src="https://images.unsplash.com/photo-1509391366360-2e959784a276?q=80&w=1200&auto=format&fit=crop" alt="Placas solares">
-    </div>
+<!-- Imagem ilustrativa -->
+<div class="imagem">
+  <img
+    src="https://images.unsplash.com/photo-1509391366360-2e959784a276?q=80&w=1200&auto=format&fit=crop"
+    alt="Painéis solares instalados em área rural">
+</div>
+```
 
   </section>
+
+  <!-- Seção de benefícios -->
 
   <section id="beneficios">
 
-    <h2>Benefícios das Placas Solares</h2>
+```
+<h2>Benefícios da Energia Solar no Agronegócio</h2>
 
-    <div class="cards">
+<div class="cards">
 
-      <div class="card">
-        <h3>Economia</h3>
-        <p>Redução dos custos de energia elétrica.</p>
-      </div>
+  <!-- Card 1 -->
+  <div class="card">
+    <h3>Economia</h3>
+    <p>
+      Redução dos gastos com energia elétrica, permitindo maior investimento
+      em outras áreas da propriedade rural.
+    </p>
+  </div>
 
-      <div class="card">
-        <h3>Sustentabilidade</h3>
-        <p>Energia limpa e renovável para o meio ambiente.</p>
-      </div>
+  <!-- Card 2 -->
+  <div class="card">
+    <h3>Sustentabilidade</h3>
+    <p>
+      Produção de energia limpa e renovável, reduzindo impactos ambientais
+      e contribuindo para um futuro mais sustentável.
+    </p>
+  </div>
 
-      <div class="card">
-        <h3>Autonomia</h3>
-        <p>O produtor gera sua própria energia.</p>
-      </div>
+  <!-- Card 3 -->
+  <div class="card">
+    <h3>Autonomia Energética</h3>
+    <p>
+      O produtor rural passa a gerar sua própria energia, diminuindo a
+      dependência das concessionárias.
+    </p>
+  </div>
 
-    </div>
+</div>
+```
 
   </section>
+
+  <!-- Seção sobre o estudante -->
 
   <section id="aluno" class="container">
 
-    <div class="texto">
-      <h2>Sobre o Aluno</h2>
+```
+<div class="texto">
+  <h2>Sobre o Autor</h2>
 
-      <p><strong>Nome:</strong> Seu Nome Aqui</p>
+  <p><strong>Nome:</strong> Gabriel de Lima</p>
 
-      <p>
-        Este trabalho foi desenvolvido para apresentar a importância
-        da energia solar no agronegócio e incentivar práticas sustentáveis.
-      </p>
-    </div>
+  <p>
+    Este projeto foi desenvolvido com o objetivo de destacar a importância
+    da energia solar no agronegócio, demonstrando como a tecnologia pode
+    promover economia, eficiência e preservação ambiental no campo.
+  </p>
+</div>
 
-    <div class="imagem">
-      <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?q=80&w=1200&auto=format&fit=crop" alt="Aluno">
-    </div>
+<!-- Foto do aluno -->
+<div class="imagem">
+  <img
+    src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?q=80&w=1200&auto=format&fit=crop"
+    alt="Estudante desenvolvendo projeto escolar">
+</div>
+```
 
   </section>
+
+  <!-- Seção sobre o programa Agrinho -->
 
   <section id="agrinho">
 
-    <h2>Projeto Agrinho</h2>
+```
+<h2>Projeto Agrinho</h2>
 
-    <div class="cards">
+<div class="cards">
 
-      <div class="card">
-        <h3>O que é?</h3>
+  <!-- Card explicativo -->
+  <div class="card">
+    <h3>O que é o Agrinho?</h3>
 
-        <p>
-          O Agrinho é um programa educacional que incentiva
-          cidadania, sustentabilidade e educação.
-        </p>
-      </div>
+    <p>
+      O Agrinho é um dos maiores programas educacionais do Brasil,
+      promovendo cidadania, sustentabilidade, responsabilidade social
+      e educação de qualidade para estudantes.
+    </p>
+  </div>
 
-      <div class="card">
-        <h3>Objetivo</h3>
+  <!-- Card de objetivo -->
+  <div class="card">
+    <h3>Objetivo do Projeto</h3>
 
-        <p>
-          Desenvolver conhecimentos sobre tecnologia,
-          meio ambiente e sociedade.
-        </p>
-      </div>
+    <p>
+      Incentivar a construção de conhecimentos sobre tecnologia,
+      meio ambiente, inovação e desenvolvimento sustentável,
+      aproximando a realidade do campo e da cidade.
+    </p>
+  </div>
 
-    </div>
+</div>
+```
 
   </section>
 
-
+  <!-- Galeria de imagens -->
 
   <section id="galeria">
 
-  <h2>Galeria Agro e Energia Solar</h2>
+```
+<h2>Galeria: Energia Solar e Agronegócio</h2>
 
-  <div class="galeria-container" id="galeria-container">
-    <!-- Imagens serão criadas pelo JavaScript -->
-  </div>
+<!-- As imagens serão inseridas dinamicamente pelo JavaScript -->
+<div class="galeria-container" id="galeria-container"></div>
+```
 
-</section>
+  </section>
+
+  <!-- Botão para ativar/desativar o modo escuro -->
 
   <button class="modo-escuro" onclick="modoEscuro()">
     🌙
   </button>
 
-    <footer >
-   <p>&copy; 2026 Gabriel de Lima - Projeto Agrinho</p>
+  <!-- Rodapé do site -->
+
+  <footer>
+    <p>&copy; 2026 Gabriel de Lima - Projeto Agrinho</p>
     <p>Todos os direitos reservados.</p>
   </footer>
 
+  <!-- Arquivos JavaScript -->
+
   <script src="script.js"></script>
-  <script src="./menu.js"></script>
+
+  <script src="menu.js"></script>
 
 </body>
+
 </html>
