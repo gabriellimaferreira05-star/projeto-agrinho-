@@ -1,16 +1,20 @@
-// Mensagem ao clicar no botão
+// Mensagem exibida ao clicar no botão "Saiba Mais"
 function mostrarMensagem(){
-  alert("A energia solar ajuda o agro e protege o meio ambiente!");
+  alert(
+    "A energia solar é uma fonte de energia limpa e renovável que contribui para a redução dos custos no agronegócio e para a preservação do meio ambiente."
+  );
 }
 
-// Modo escuro
+// Ativa e desativa o modo escuro da página
 function modoEscuro(){
   document.body.classList.toggle("dark-mode");
 }
 
-// Mensagem inicial
+// Mensagem de boas-vindas ao carregar o site
 window.onload = function(){
-  alert("Bem-vindo ao Projeto Energia Solar no Agro!");
+  alert(
+    "Seja bem-vindo ao Projeto Energia Solar no Agronegócio! Conheça como a tecnologia solar está transformando o campo com sustentabilidade e inovação."
+  );
 }
 
 // =======================
@@ -21,7 +25,7 @@ const imagens = [
 
   {
     url: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRphJltdCWmzu8Q4cqO2b_KT71BFFVXbrg_UQ&s",
-    titulo: "Placas Solares no Campo"
+    titulo: "Painéis Solares em Área Rural"
   },
 
   {
@@ -31,48 +35,22 @@ const imagens = [
 
   {
     url: "https://images.unsplash.com/photo-1501004318641-b39e6451bec6?q=80&w=1200&auto=format&fit=crop",
-    titulo: "Plantação Moderna"
+    titulo: "Produção Agrícola Moderna"
   },
 
   {
     url: "https://images.unsplash.com/photo-1472396961693-142e6e269027?q=80&w=1200&auto=format&fit=crop",
-    titulo: "Tecnologia no Agro"
+    titulo: "Tecnologia Aplicada ao Campo"
   },
 
   {
     url: "https://images.unsplash.com/photo-1499529112087-3cb3b73cec95?q=80&w=1200&auto=format&fit=crop",
-    titulo: "Energia Renovável"
+    titulo: "Energia Limpa e Renovável"
   },
 
   {
     url: "https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?q=80&w=1200&auto=format&fit=crop",
-    titulo: "Campo e Sustentabilidade"
+    titulo: "Sustentabilidade no Agronegócio"
   }
 
 ];
-
-// Container da galeria
-const galeria = document.getElementById("galeria-container");
-
-// Criando imagens dinamicamente
-imagens.forEach(function(imagem){
-
-  // Criar card
-  const card = document.createElement("div");
-  card.classList.add("galeria-item");
-
-  // Criar imagem
-  const img = document.createElement("img");
-  img.src = imagem.url;
-
-  // Criar título
-  const titulo = document.createElement("p");
-  titulo.textContent = imagem.titulo;
-
-  // Adicionar elementos
-  card.appendChild(img);
-  card.appendChild(titulo);
-
-  galeria.appendChild(card);
-
-});
