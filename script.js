@@ -1,20 +1,37 @@
 // Mensagem exibida ao clicar no botão "Saiba Mais"
-function mostrarMensagem(){
-  alert(
-    "A energia solar é uma fonte de energia limpa e renovável que contribui para a redução dos custos no agronegócio e para a preservação do meio ambiente."
-  );
+function exibirMensagem(texto){
+
+  const mensagem = document.getElementById("mensagem");
+
+  mensagem.textContent = texto;
+  mensagem.classList.add("mostrar");
+
+  setTimeout(() => {
+    mensagem.classList.remove("mostrar");
+  }, 4000);
+
 }
 
+// Botão Saiba Mais
+function mostrarMensagem(){
+
+  exibirMensagem(
+    "A energia solar reduz custos, aumenta a sustentabilidade e contribui para um agronegócio mais eficiente."
+  );
+
+}
+
+// Mensagem inicial
+window.onload = function(){
+
+  exibirMensagem(
+    "Bem-vindo ao Projeto Energia Solar no Agronegócio!"
+  );
+
+}
 // Ativa e desativa o modo escuro da página
 function modoEscuro(){
   document.body.classList.toggle("dark-mode");
-}
-
-// Mensagem de boas-vindas ao carregar o site
-window.onload = function(){
-  alert(
-    "Seja bem-vindo ao Projeto Energia Solar no Agronegócio! Conheça como a tecnologia solar está transformando o campo com sustentabilidade e inovação."
-  );
 }
 
 // =======================

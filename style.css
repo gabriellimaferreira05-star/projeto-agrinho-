@@ -338,3 +338,21 @@ footer{
     right:10px;
   }
 }
+
+.mensagem{
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  background: #2e7d32;
+  color: white;
+  padding: 15px 25px;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+  transform: translateX(400px);
+  transition: 0.5s;
+  z-index: 999;
+}
+
+.mensagem.mostrar{
+  transform: translateX(0);
+}
