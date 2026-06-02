@@ -27,6 +27,7 @@ window.onload = function(){
   exibirMensagem(
     "Bem-vindo ao Projeto Energia Solar no Agronegócio!"
   );
+  carregarGaleria();
 
 }
 // Ativa e desativa o modo escuro da página
@@ -71,3 +72,29 @@ const imagens = [
   }
 
 ];
+
+function carregarGaleria(){
+  const container = document.getElementById("galeria-container");
+  if (!container) return;
+
+  imagens.forEach((imagem) => {
+    const item = document.createElement("div");
+    item.className = "galeria-item";
+
+    const img = document.createElement("img");
+    img.src = imagem.url;
+    img.alt = imagem.titulo;
+
+    const caption = document.createElement("p");
+    caption.textContent = imagem.titulo;
+    caption.style.padding = "15px";
+    caption.style.margin = "0";
+    caption.style.background = "rgba(255,255,255,0.9)";
+    caption.style.color = "#333";
+    caption.style.fontWeight = "700";
+
+    item.appendChild(img);
+    item.appendChild(caption);
+    container.appendChild(item);
+  });
+}
