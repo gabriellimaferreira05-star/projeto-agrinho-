@@ -46,27 +46,27 @@ const imagens = [
   },
 
   {
-    url: "https://images.unsplash.com/photo-1464226184884-fa280b87c399?q=80&w=1200&auto=format&fit=crop",
+    url: "https://oregional.net/wp-content/uploads/2024/08/unnamed-1024x682.webp",
     titulo: "Agronegócio Sustentável"
   },
 
   {
-    url: "https://images.unsplash.com/photo-1501004318641-b39e6451bec6?q=80&w=1200&auto=format&fit=crop",
+    url: "https://aegro.com.br/images/blog/geradas/proirriga-como-funciona-o-financiamento-para-irrigacao-no-plano-safra.webp",
     titulo: "Produção Agrícola Moderna"
   },
 
   {
-    url: "https://images.unsplash.com/photo-1472396961693-142e6e269027?q=80&w=1200&auto=format&fit=crop",
+    url: "https://www.pantanalnews.com.br/wp-content/uploads/2023/03/shutterstock_1450758134.jpg",
     titulo: "Tecnologia Aplicada ao Campo"
   },
 
   {
-    url: "https://images.unsplash.com/photo-1499529112087-3cb3b73cec95?q=80&w=1200&auto=format&fit=crop",
+    url: "https://mercadoeconsumo.com.br/wp-content/uploads/2023/05/ENERGIA_LIMPA_SHUTTER.jpg",
     titulo: "Energia Limpa e Renovável"
   },
 
   {
-    url: "https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?q=80&w=1200&auto=format&fit=crop",
+    url: "https://sna.agr.br/wp-content/uploads/2020/08/sustentavel-1.jpg",
     titulo: "Sustentabilidade no Agronegócio"
   }
 
