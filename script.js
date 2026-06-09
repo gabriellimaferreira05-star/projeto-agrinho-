@@ -22,14 +22,13 @@ function mostrarMensagem(){
 }
 
 // Mensagem inicial
-window.onload = function(){
-
+window.addEventListener("DOMContentLoaded", function(){
   exibirMensagem(
     "Bem-vindo ao Projeto Energia Solar no Agronegócio!"
   );
   carregarGaleria();
+});
 
-}
 // Ativa e desativa o modo escuro da página
 function modoEscuro(){
   document.body.classList.toggle("dark-mode");
